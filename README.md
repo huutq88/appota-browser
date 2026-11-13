@@ -33,6 +33,10 @@
   - **Cập nhật:** bộ lọc tự cập nhật mỗi 4 ngày.
   - **Bật/tắt:** nhấp chuột phải vào trang để tắt cho riêng trang đó, hoặc tắt cho toàn trình duyệt.
 - **Gọn nhẹ:** các dịch vụ chạy ngầm không cần thiết của Chrome được tắt sẵn.
+- **Trang Thẻ mới mang logo Appota.**
+- **Tự kiểm tra bản mới** mỗi ngày một lần, và hỏi bạn trước khi tải bản cập nhật.
+- **Chuyển dữ liệu từ bản 0.2:** dấu trang được nhập tự động ở lần mở đầu tiên.
+- **Có chữ ký số:** ứng dụng được ký bằng Developer ID và đã được Apple công chứng (notarized).
 
 ## Cài đặt
 
@@ -40,22 +44,15 @@
 
 1. Tải tệp `Appota-Browser-<phiên bản>-mac-arm64.dmg` từ [trang Releases](https://github.com/huutq88/appota-browser/releases/latest).
 2. Mở tệp `.dmg`, kéo **Appota Browser** vào thư mục **Applications**.
-3. Mở Appota Browser lần đầu: bản này chưa được Apple công chứng, nên macOS sẽ chặn ở lần mở đầu tiên. Hãy:
-   1. Mở **Cài đặt hệ thống > Quyền riêng tư và bảo mật**.
-   2. Kéo xuống phần **Bảo mật**, bấm **Vẫn mở**.
-   3. Xác nhận **Mở**.
+3. Mở Appota Browser từ Launchpad hoặc thư mục Applications.
 
-   Nếu macOS báo ứng dụng "bị hỏng", chạy lệnh sau trong Terminal rồi mở lại:
-
-   ```bash
-   xattr -dr com.apple.quarantine "/Applications/Appota Browser.app"
-   ```
+Khi có bản mới, Appota sẽ hỏi bạn có muốn tải về không. Cài bản mới bằng cách kéo vào Applications và chọn **Thay thế**; dấu trang, lịch sử và cài đặt được giữ nguyên.
 
 ## Hiệu năng so với Google Chrome
 
 **Bộ nhớ và CPU khi mở 6 trang web, sau 30 giây:**
 
-| | Appota Browser 0.3.0 | Google Chrome | Chênh lệch |
+| | Appota Browser 0.3 | Google Chrome | Chênh lệch |
 |---|---|---|---|
 | RAM | **908 MB** | 1.719 MB | ít hơn 47% |
 | CPU | **6,9%** | 32,6% | ít hơn 79% |
@@ -87,20 +84,16 @@ Thời gian tải trang phụ thuộc mạng và quảng cáo tại thời đi�
 ## Hạn chế hiện tại
 
 - **Hệ điều hành:** mới có bản cho macOS chip Apple. Chưa có bản cho Mac chip Intel, Windows và Linux.
-- **Chữ ký số:** chưa có chữ ký của Apple Developer, nên lần mở đầu cần thao tác như hướng dẫn ở trên.
-- **Tính năng Chrome còn thiếu:**
-  - đăng nhập tài khoản Google và đồng bộ;
-  - tự động cập nhật.
-
-  Để cập nhật, tải bản mới ở trang Releases.
-- **Trang Thẻ mới:** là trang của Google, chưa có giao diện riêng của Appota.
-- **Khung quảng cáo:** trên vài trang, khung quảng cáo đã bị chặn vẫn để lại một khoảng trống ở lần tải đầu tiên.
+- **Đăng nhập tài khoản Google và đồng bộ:** không có. Google chỉ cấp quyền này cho Chrome chính hãng.
+- **Cập nhật:** Appota báo khi có bản mới, nhưng bạn vẫn tự cài bản mới bằng file `.dmg`.
+- **Lần mở đầu tiên:** bộ lọc quảng cáo mất khoảng 5 giây để tải về. Các trang mở trong lúc đó có thể còn quảng cáo hoặc để lại khoảng trống ở chỗ khung quảng cáo.
 
 ## Quyền riêng tư
 
 - Appota Browser không thu thập dữ liệu sử dụng và không gửi thống kê về Appota.
 - Lịch sử, dấu trang, mật khẩu và cài đặt chỉ lưu trên máy bạn, trong thư mục `~/Library/Application Support/Appota Browser`.
 - Danh sách bộ lọc quảng cáo được tải từ nguồn công khai, mỗi 4 ngày một lần.
+- Kiểm tra bản mới chỉ gọi API công khai của GitHub Releases, không gửi thông tin nào về bạn.
 
 ## Phiên bản trước
 
