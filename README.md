@@ -33,7 +33,8 @@
   - **Cập nhật:** bộ lọc tự cập nhật mỗi 4 ngày.
   - **Bật/tắt:** nhấp chuột phải vào trang để tắt cho riêng trang đó, hoặc tắt cho toàn trình duyệt.
 - **Gọn nhẹ:** các dịch vụ chạy ngầm không cần thiết của Chrome được tắt sẵn.
-- **Trang Thẻ mới mang logo Appota.**
+- **Trang Thẻ mới mang logo Appota,** kèm sẵn lối tắt tới Appota (appota.com) và GoG (gog.zone), có biểu tượng của từng trang.
+- **Hồ sơ cục bộ:** Menu ⋮ > Hồ sơ > Thêm sẽ tạo ngay một hồ sơ mới trên máy, không cần tài khoản Google. Mỗi hồ sơ có dấu trang, lịch sử và cookie riêng.
 - **Tự kiểm tra bản mới** mỗi ngày một lần, và hỏi bạn trước khi tải bản cập nhật.
 - **Chuyển dữ liệu từ bản 0.2:** dấu trang được nhập tự động ở lần mở đầu tiên.
 - **Có chữ ký số:** ứng dụng được ký bằng Developer ID và đã được Apple công chứng (notarized).
@@ -84,7 +85,7 @@ Thời gian tải trang phụ thuộc mạng và quảng cáo tại thời đi�
 ## Hạn chế hiện tại
 
 - **Hệ điều hành:** mới có bản cho macOS chip Apple. Chưa có bản cho Mac chip Intel, Windows và Linux.
-- **Đăng nhập tài khoản Google và đồng bộ:** không có. Google chỉ cấp quyền này cho Chrome chính hãng.
+- **Đăng nhập tài khoản Google và đồng bộ:** không có, vì Google chỉ cấp quyền này cho Chrome chính hãng. Hồ sơ chỉ lưu trên máy. Đây cũng là lý do thanh công cụ không có nút avatar như Chrome.
 - **Cập nhật:** Appota báo khi có bản mới, nhưng bạn vẫn tự cài bản mới bằng file `.dmg`.
 - **Lần mở đầu tiên:** bộ lọc quảng cáo mất khoảng 5 giây để tải về. Các trang mở trong lúc đó có thể còn quảng cáo hoặc để lại khoảng trống ở chỗ khung quảng cáo.
 
