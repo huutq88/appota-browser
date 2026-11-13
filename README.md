@@ -32,6 +32,12 @@
   - **Bộ lọc:** EasyList, EasyPrivacy, uBlock Origin và ABPVN cho các trang Việt Nam.
   - **Cập nhật:** bộ lọc tự cập nhật mỗi 4 ngày.
   - **Bật/tắt:** nhấp chuột phải vào trang để tắt cho riêng trang đó, hoặc tắt cho toàn trình duyệt.
+- **Chống lấy dấu vân tay trình duyệt (fingerprint):**
+  - **Canvas, WebGL, âm thanh:** dữ liệu trang đọc được có thêm một lượng nhiễu rất nhỏ, khác nhau theo từng trang web và đổi sau mỗi lần mở trình duyệt.
+  - **Thông tin phần cứng:** GPU, số nhân CPU, RAM và độ sâu màu chỉ trả về các giá trị phổ biến.
+
+  Nhờ vậy, trang web không thể dùng dấu vân tay để nhận ra bạn khi bạn chuyển sang trang khác hoặc sau khi xoá cookie. Thử bằng FingerprintJS: Chrome cho cùng một mã nhận dạng ở hai profile mới, còn Appota cho mã khác nhau sau mỗi lần mở. Nhấp chuột phải để tắt tính năng này cho riêng một trang, ví dụ ngân hàng đòi xác minh thêm.
+- **Chặn script lấy dấu vân tay:** bổ sung các quy tắc chặn FingerprintJS và các dịch vụ tương tự. Request của service worker cũng đi qua bộ chặn.
 - **Gọn nhẹ:** các dịch vụ chạy ngầm không cần thiết của Chrome được tắt sẵn.
 - **Trang Thẻ mới mang logo Appota,** kèm sẵn lối tắt tới Appota (appota.com) và GoG (gog.zone), có biểu tượng của từng trang.
 - **Hồ sơ cục bộ:** Menu ⋮ > Hồ sơ > Thêm sẽ tạo ngay một hồ sơ mới trên máy, không cần tài khoản Google. Mỗi hồ sơ có dấu trang, lịch sử và cookie riêng.
@@ -87,6 +93,10 @@ Thời gian tải trang phụ thuộc mạng và quảng cáo tại thời đi�
 - **Hệ điều hành:** mới có bản cho macOS chip Apple. Chưa có bản cho Mac chip Intel, Windows và Linux.
 - **Đăng nhập tài khoản Google và đồng bộ:** không có, vì Google chỉ cấp quyền này cho Chrome chính hãng. Hồ sơ chỉ lưu trên máy. Đây cũng là lý do thanh công cụ không có nút avatar như Chrome.
 - **Cập nhật:** Appota báo khi có bản mới, nhưng bạn vẫn tự cài bản mới bằng file `.dmg`.
+- **Chống lấy dấu vân tay chưa phủ hết:**
+  - chưa áp dụng bên trong Web Worker;
+  - chưa giới hạn danh sách font;
+  - độ phân giải màn hình vẫn là giá trị thật.
 - **Lần mở đầu tiên:** bộ lọc quảng cáo mất khoảng 5 giây để tải về. Các trang mở trong lúc đó có thể còn quảng cáo hoặc để lại khoảng trống ở chỗ khung quảng cáo.
 
 ## Quyền riêng tư
