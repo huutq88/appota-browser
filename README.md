@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/huutq88/appota-browser/releases/latest"><b>Tải về cho macOS (Apple Silicon)</b></a>
+  <a href="https://github.com/huutq88/appota-browser/releases/latest"><b>Tải về cho macOS (Apple Silicon) và Windows (64-bit)</b></a>
 </p>
 
 ---
@@ -43,9 +43,11 @@
 - **Hồ sơ cục bộ:** Menu ⋮ > Hồ sơ > Thêm sẽ tạo ngay một hồ sơ mới trên máy, không cần tài khoản Google. Mỗi hồ sơ có dấu trang, lịch sử và cookie riêng.
 - **Tự kiểm tra bản mới** mỗi ngày một lần, và hỏi bạn trước khi tải bản cập nhật.
 - **Chuyển dữ liệu từ bản 0.2:** dấu trang được nhập tự động ở lần mở đầu tiên.
-- **Có chữ ký số:** ứng dụng được ký bằng Developer ID và đã được Apple công chứng (notarized).
+- **Có chữ ký số trên macOS:** ứng dụng được ký bằng Developer ID và đã được Apple công chứng (notarized).
 
 ## Cài đặt
+
+### macOS
 
 **Yêu cầu:** máy Mac chip Apple (M1 trở lên), macOS 12 trở lên.
 
@@ -54,6 +56,18 @@
 3. Mở Appota Browser từ Launchpad hoặc thư mục Applications.
 
 Khi có bản mới, Appota sẽ hỏi bạn có muốn tải về không. Cài bản mới bằng cách kéo vào Applications và chọn **Thay thế**; dấu trang, lịch sử và cài đặt được giữ nguyên.
+
+### Windows
+
+**Yêu cầu:** Windows 10 hoặc 11, 64-bit.
+
+1. Tải tệp `Appota-Browser-<phiên bản>-win-x64.zip` từ [trang Releases](https://github.com/huutq88/appota-browser/releases/latest).
+2. Giải nén vào một thư mục, ví dụ `C:\Appota Browser`.
+3. Mở `Appota Browser.exe` trong thư mục `Appota-Browser`.
+
+Bản Windows chưa có chữ ký số, nên lần mở đầu Windows SmartScreen có thể cảnh báo. Chọn **Thông tin thêm** rồi **Vẫn chạy** để mở.
+
+Cập nhật bản mới: đóng Appota Browser, giải nén bản mới đè lên thư mục cũ. Dấu trang, lịch sử và cài đặt được giữ nguyên.
 
 ## Hiệu năng so với Google Chrome
 
@@ -90,9 +104,10 @@ Thời gian tải trang phụ thuộc mạng và quảng cáo tại thời đi�
 
 ## Hạn chế hiện tại
 
-- **Hệ điều hành:** mới có bản cho macOS chip Apple. Chưa có bản cho Mac chip Intel, Windows và Linux.
+- **Hệ điều hành:** có bản cho macOS chip Apple và Windows 64-bit. Chưa có bản cho Mac chip Intel và Linux.
+- **Bản Windows:** chưa có chữ ký số và chưa có trình cài đặt; bạn giải nén tệp `.zip` rồi chạy trực tiếp.
 - **Đăng nhập tài khoản Google và đồng bộ:** không có, vì Google chỉ cấp quyền này cho Chrome chính hãng. Hồ sơ chỉ lưu trên máy. Đây cũng là lý do thanh công cụ không có nút avatar như Chrome.
-- **Cập nhật:** Appota báo khi có bản mới, nhưng bạn vẫn tự cài bản mới bằng file `.dmg`.
+- **Cập nhật:** Appota báo khi có bản mới, nhưng bạn vẫn tự cài bản mới bằng tệp `.dmg` (macOS) hoặc `.zip` (Windows).
 - **Chống lấy dấu vân tay chưa phủ hết:**
   - chưa áp dụng bên trong Web Worker;
   - chưa giới hạn danh sách font;
@@ -102,7 +117,7 @@ Thời gian tải trang phụ thuộc mạng và quảng cáo tại thời đi�
 ## Quyền riêng tư
 
 - Appota Browser không thu thập dữ liệu sử dụng và không gửi thống kê về Appota.
-- Lịch sử, dấu trang, mật khẩu và cài đặt chỉ lưu trên máy bạn, trong thư mục `~/Library/Application Support/Appota Browser`.
+- Lịch sử, dấu trang, mật khẩu và cài đặt chỉ lưu trên máy bạn, trong thư mục `~/Library/Application Support/Appota Browser` (macOS) hoặc `%LOCALAPPDATA%\Appota Browser` (Windows).
 - Danh sách bộ lọc quảng cáo được tải từ nguồn công khai, mỗi 4 ngày một lần.
 - Kiểm tra bản mới chỉ gọi API công khai của GitHub Releases, không gửi thông tin nào về bạn.
 
